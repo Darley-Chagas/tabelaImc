@@ -30,7 +30,7 @@ div{
     max-width: 640px;
     margin: 50px auto;
     background: rgb(2,0,36);
-background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(144,227,230,1) 47%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(144,227,230,1) 47%, rgba(0,212,255,1) 100%);
     padding: 20px;
     border-radius: 10px;
     
@@ -38,6 +38,7 @@ background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(144,227,230,1) 47%, r
 
 
 form input, form label, form button{
+    border-radius: 10px;
     display: block;
     width: 100%;
     margin-bottom: 10px;
@@ -60,12 +61,13 @@ form button:hover{
     background-color: var(--second-color);
 }
 .paragrafo-resultado, .bad{
+    border-radius: 10px;
     padding: 10px;
     background-color: var(--primary-color);
 }
 .bad{
     background: red;
+    border-radius: 10px;
 }
-
 
 
