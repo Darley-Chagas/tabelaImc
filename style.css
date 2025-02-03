@@ -9,21 +9,25 @@
 }
 
 body {
+    
     margin: 0;
     padding: 0;
-    background: #f0f4f8;
+    background: url(img/img.jpg) no-repeat
 }
-
+h1, h2 {
+    color: #ffffff;
+    text-align: center;
+}
 #flex-container {
     display: flex;
     justify-content: space-around;
-    border: 2px solid var(--primary-color);
+    border: 3px solid rgba(255, 255, 255, .2);
     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
     padding: 10px; /* Adiciona um espaçamento interno */
 }
 
 div {
-    color: #060606;
+    color: #ffffff;
     line-height: 1.5em; /* Ajustado para melhor legibilidade */
     font-weight: bold;
     font-size: 16px; /* Tamanho de fonte padrão */
@@ -34,12 +38,14 @@ div {
 .container {
     max-width: 640px;
     margin: 50px auto;
-    background: linear-gradient(71deg, rgba(2, 0, 36, 1) 0%, rgba(144, 227, 230, 1) 47%, rgba(0, 212, 255, 1) 100%);
+    background: transparent;
+    backdrop-filter: blur(20px);
     padding: 20px;
-    border-radius: 10px;
+    border: 10px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
     box-shadow: 
-        0 4px 6px rgba(0, 0, 0, 0.1),
-        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 4px 6px rgb(255, 255, 255),
+        0 10px 20px rgba(255, 255, 255, 0.15),
         0 15px 30px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
@@ -58,8 +64,9 @@ div {
 }
 
 form input,
-form label,
+
 form button {
+    border: 3px solid rgba(255, 255, 255, .2);
     border-radius: 10px;
     display: block;
     width: 100%;
@@ -70,6 +77,9 @@ form button {
 
 form input:focus {
     outline: 2px solid var(--second-color);
+}
+label{
+ color: #ffffff;
 }
 
 form button {
