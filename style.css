@@ -1,54 +1,56 @@
-:root{
-    --primary-color:rgb(137, 161, 248);
-    --second-color:rgba(91, 194, 246, 0.781);
-     
+:root {
+    --primary-color: rgb(137, 161, 248);
+    --second-color: rgba(91, 194, 246, 0.781);
 }
 
-*{
+* {
     box-sizing: border-box;
     outline: 0;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(140,220,222,1) 55%, rgba(0,212,255,1) 100%);
-       
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(140, 220, 222, 1) 55%);
 }
-#flex-container{
+
+#flex-container {
     display: flex;
     justify-content: space-around;
     border: 2px solid var(--primary-color);
+    flex-wrap: wrap; /* Adicionado: permite que os itens quebrem para a próxima linha em telas menores */
 }
-div{
+
+div {
     color: #060606;
     line-height: 0.8em;
     font-weight: bold;
 }
 
-.container{
+.container {
     max-width: 640px;
     margin: 50px auto;
-    background: rgb(2,0,36);
-    background: linear-gradient(71deg, rgba(2,0,36,1) 0%, rgba(144,227,230,1) 47%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(71deg, rgba(2, 0, 36, 1) 0%, rgba(144, 227, 230, 1) 47%, rgba(0, 212, 255, 1) 100%);
     padding: 20px;
     border-radius: 10px;
-    
 }
 
-
-form input, form label, form button{
+form input,
+form label,
+form button {
     border-radius: 10px;
     display: block;
     width: 100%;
     margin-bottom: 10px;
     font-size: 20px;
+    font-weight: lighter;
 }
 
-form input:focus{
-    outline:2px solid var(--second-color);
+form input:focus {
+    outline: 2px solid var(--second-color);
 }
-form button{
+
+form button {
     border: none;
     background-color: var(--primary-color);
     font-size: 20px;
@@ -57,17 +59,55 @@ form button{
     cursor: pointer;
     margin-top: 30px;
 }
-form button:hover{
+
+form button:hover {
     background-color: var(--second-color);
 }
-.paragrafo-resultado, .bad{
+
+.paragrafo-resultado,
+.bad {
     border-radius: 10px;
     padding: 10px;
     background-color: var(--primary-color);
 }
-.bad{
+
+.bad {
     background: red;
     border-radius: 10px;
 }
 
+/* Adicionado: Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto; 
+        padding: 15px; 
+    }
 
+    #flex-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    form input,
+    form label,
+    form button {
+        font-size: 16px; 
+    }
+
+    form button {
+        height: 40px; 
+    }
+}
+
+/* Adicionado: Responsividade para telas muito pequenas (celulares) */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%; 
+    }
+
+    form input,
+    form label,
+    form button {
+        font-size: 14px; 
+    }
+}
