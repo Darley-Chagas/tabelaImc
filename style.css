@@ -11,20 +11,24 @@
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(140, 220, 222, 1) 55%);
+    background: #f0f4f8;
 }
 
 #flex-container {
     display: flex;
     justify-content: space-around;
     border: 2px solid var(--primary-color);
-    flex-wrap: wrap; /* Adicionado: permite que os itens quebrem para a próxima linha em telas menores */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    padding: 10px; /* Adiciona um espaçamento interno */
 }
 
 div {
     color: #060606;
-    line-height: 0.8em;
+    line-height: 1.5em; /* Ajustado para melhor legibilidade */
     font-weight: bold;
+    font-size: 16px; /* Tamanho de fonte padrão */
+    margin: 10px; /* Adiciona margem para evitar sobreposição */
+    text-align: center; /* Centraliza o texto */
 }
 
 .container {
@@ -33,6 +37,24 @@ div {
     background: linear-gradient(71deg, rgba(2, 0, 36, 1) 0%, rgba(144, 227, 230, 1) 47%, rgba(0, 212, 255, 1) 100%);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), transparent);
+    pointer-events: none;
 }
 
 form input,
@@ -76,38 +98,47 @@ form button:hover {
     border-radius: 10px;
 }
 
-/* Adicionado: Responsividade para telas menores */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .container {
-        margin: 20px auto; 
-        padding: 15px; 
+        margin: 20px auto;
+        padding: 15px;
     }
 
     #flex-container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: row; /* Altera a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    div {
+        font-size: 14px; 
+        margin: 5px; 
     }
 
     form input,
     form label,
     form button {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     form button {
-        height: 40px; 
+        height: 40px;
     }
 }
 
-/* Adicionado: Responsividade para telas muito pequenas (celulares) */
+/* Responsividade para telas muito pequenas (celulares) */
 @media (max-width: 480px) {
     .container {
-        max-width: 90%; 
+        max-width: 90%;
+    }
+
+    div {
+        font-size: 12px; 
     }
 
     form input,
     form label,
     form button {
-        font-size: 14px; 
+        font-size: 14px;
     }
 }
