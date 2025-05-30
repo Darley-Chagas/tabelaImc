@@ -29,7 +29,7 @@ Interface limpa e responsiva.
 Online (Recomendado):
 
 •
-Você pode acessar a versão online do projeto através deste link: calc.imc.shop
+Você pode acessar a versão online do projeto através deste link: calc-imc.shop
 
 
 
