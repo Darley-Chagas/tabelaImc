@@ -46,6 +46,13 @@ Navegue até a pasta do projeto.
 Abra o arquivo index.html no seu navegador.
 
 
+
+📸Screenshot/Gif
+
+![image](https://github.com/user-attachments/assets/a9f334b2-ed86-416e-8d2b-a9c781b8f880)
+
+
+
 📄 Licença
 
 Este projeto está sob a licença MIT.
